@@ -1,7 +1,7 @@
 # CGS-Net: Clinical-Guided Spatiotemporal Dual-Configuration Network for Liver Tumor Segmentation 
 
 <center>
-  <img src="https://github.com/jylEcho/CSF-Net-plus-plus/blob/main/images/V13.0.png" width="800" alt="">
+  <img src="https://github.com/jylEcho/CGS-Net/blob/main/images/V15.0.png" width="800" alt="">
 </center>
 
 
@@ -59,12 +59,12 @@ These phases are complementary, making multi-phase fusion a powerful strategy fo
 ## Results
 
 - **On PLC-CECT:** Both configurations of CGS-Net achieve superior results over existing methods.
-CSF-Swin attains 76.26% DSC (+1.09%), 62.44% Jaccard (+2.22%), 24.63 HD$_{95}$ (↓4.59), and 14.67 ASSD (↓2.08), surpassing MCDA-Net and MW-UNet by a clear margin.
-CSF-CNN also delivers strong performance (76.14% DSC, 61.47% Jaccard), confirming the robustness of the proposed dual-configuration framework across backbone designs.
+CGS-Swin attains 76.26% DSC (+1.09%), 62.44% Jaccard (+2.22%), 24.63 HD$_{95}$ (↓4.59), and 14.67 ASSD (↓2.08), surpassing MCDA-Net and MW-UNet by a clear margin.
+CGS-CNN also delivers strong performance (76.14% DSC, 61.47% Jaccard), confirming the robustness of the proposed dual-configuration framework across backbone designs.
 
 - **On MPLL:** CGS-Net establishes new state-of-the-art results.
-CSF-Swin achieves 76.29% DSC and 61.67% Jaccard, with the lowest HD$_{95}$ and ASSD, while
-CSF-CNN attains 75.96% DSC and 61.23% Jaccard, demonstrating consistent cross-dataset generalization and clinical reliability.
+CGS-Swin achieves 76.29% DSC and 61.67% Jaccard, with the lowest HD$_{95}$ and ASSD, while
+CGS-CNN attains 75.96% DSC and 61.23% Jaccard, demonstrating consistent cross-dataset generalization and clinical reliability.
 
 - **Qualitative analysis:** Compared to MCDA-Net, CGS-Net produces sharper tumor boundaries (e.g., case 1) and more accurate identification of small nodules (e.g., case 3), validating the effectiveness of its spatiotemporal dual-configuration design for multi-phase feature fusion.
 
