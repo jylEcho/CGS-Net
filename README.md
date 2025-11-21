@@ -1,4 +1,4 @@
-# CSF-Net++: Clinical-Guided Spatiotemporal Dual-Configuration Network for Liver Tumor Segmentation 
+# CGS-Net: Clinical-Guided Spatiotemporal Dual-Configuration Network for Liver Tumor Segmentation 
 
 <center>
   <img src="https://github.com/jylEcho/CSF-Net-plus-plus/blob/main/images/V13.0.png" width="800" alt="">
@@ -7,12 +7,12 @@
 
 ## Overview
 
-This repository provides the official implementation of CSF-Net++, a clinical-guided spatiotemporal dual-configuration network designed for accurate liver tumor segmentation from contrast-enhanced CT (CECT).
-Building upon prior multi-phase fusion strategies, CSF-Net++ introduces two upgraded configurations — a spatial clinical-guided fusion module and a temporal dual-configuration mechanism — to more effectively capture both inter-phase dependencies and intra-phase feature dynamics.
+This repository provides the official implementation of CGS-Net, a clinical-guided spatiotemporal dual-configuration network designed for accurate liver tumor segmentation from contrast-enhanced CT (CECT).
+Building upon prior multi-phase fusion strategies, CGS-Net introduces two upgraded configurations — a spatial clinical-guided fusion module and a temporal dual-configuration mechanism — to more effectively capture both inter-phase dependencies and intra-phase feature dynamics.
 
-Unlike existing methods that treat all phases equally, CSF-Net++ leverages the clinical dominance of the portal venous (PV) phase and explicitly models phase-specific propagation orders, enabling more reliable multi-phase feature integration.
+Unlike existing methods that treat all phases equally, CGS-Net leverages the clinical dominance of the portal venous (PV) phase and explicitly models phase-specific propagation orders, enabling more reliable multi-phase feature integration.
 
-Extensive experiments on PLC-CECT and MPLL datasets demonstrate that CSF-Net++ consistently outperforms previous approaches (e.g., MW-UNet, MCDA-Net), establishing a new state-of-the-art in both segmentation accuracy and boundary precision.
+Extensive experiments on PLC-CECT and MPLL datasets demonstrate that CGS-Net consistently outperforms previous approaches (e.g., MW-UNet, MCDA-Net), establishing a new state-of-the-art in both segmentation accuracy and boundary precision.
 
 ## Datasets  
 
@@ -52,21 +52,21 @@ These phases are complementary, making multi-phase fusion a powerful strategy fo
 ## Our Contributions
 
 - **Systematic single-phase analysis**: On the MPLL dataset, the portal venous (PV) phase demonstrates the strongest segmentation performance, which aligns with its established clinical dominance in liver tumor assessment.
-- **Clinically-guided propagation order**: CSF-Net++ introduces a Multi-Phase Cross-Query Sequential (MCQS) mechanism that explicitly models clinically consistent propagation. Ablation results (Table 3) confirm that the PV→ART→DL order achieves the best performance (76.29% DSC, 61.67% Jaccard), with the lowest HD$_{95}$ and ASSD. 
-- **Proposed network:** The upgraded CSF-Net++ incorporates two enhanced configurations — a spatial clinical-guided fusion module and a temporal dual-configuration strategy — enabling more effective cross-phase feature interaction and fine-grained refinement for robust multi-phase liver tumor segmentation. 
+- **Clinically-guided propagation order**: CGS-Net introduces a Multi-Phase Cross-Query Sequential (MCQS) mechanism that explicitly models clinically consistent propagation. Ablation results (Table 3) confirm that the PV→ART→DL order achieves the best performance (76.29% DSC, 61.67% Jaccard), with the lowest HD$_{95}$ and ASSD. 
+- **Proposed network:** The upgraded CGS-Net incorporates two enhanced configurations — a spatial clinical-guided fusion module and a temporal dual-configuration strategy — enabling more effective cross-phase feature interaction and fine-grained refinement for robust multi-phase liver tumor segmentation. 
 
 
 ## Results
 
-- **On PLC-CECT:** Both configurations of CSF-Net++ achieve superior results over existing methods.
+- **On PLC-CECT:** Both configurations of CGS-Net achieve superior results over existing methods.
 CSF-Swin attains 76.26% DSC (+1.09%), 62.44% Jaccard (+2.22%), 24.63 HD$_{95}$ (↓4.59), and 14.67 ASSD (↓2.08), surpassing MCDA-Net and MW-UNet by a clear margin.
 CSF-CNN also delivers strong performance (76.14% DSC, 61.47% Jaccard), confirming the robustness of the proposed dual-configuration framework across backbone designs.
 
-- **On MPLL:** CSF-Net++ establishes new state-of-the-art results.
+- **On MPLL:** CGS-Net establishes new state-of-the-art results.
 CSF-Swin achieves 76.29% DSC and 61.67% Jaccard, with the lowest HD$_{95}$ and ASSD, while
 CSF-CNN attains 75.96% DSC and 61.23% Jaccard, demonstrating consistent cross-dataset generalization and clinical reliability.
 
-- **Qualitative analysis:** Compared to MCDA-Net, CSF-Net++ produces sharper tumor boundaries (e.g., case 1) and more accurate identification of small nodules (e.g., case 3), validating the effectiveness of its spatiotemporal dual-configuration design for multi-phase feature fusion.
+- **Qualitative analysis:** Compared to MCDA-Net, CGS-Net produces sharper tumor boundaries (e.g., case 1) and more accurate identification of small nodules (e.g., case 3), validating the effectiveness of its spatiotemporal dual-configuration design for multi-phase feature fusion.
 
 Extensive experiments on two benchmark datasets, LiTS2017 and MPLL, demonstrate the superiority of our proposed method, which significantly outperforms existing state-of-the-art approaches.
 
