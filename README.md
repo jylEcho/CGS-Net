@@ -61,8 +61,22 @@ For experiments with single-phase (1P), two-phase (2P), and three-phase (3P) inp
 
 ### Dice Similarity Coefficient (DSC)
 
+Since our task involves both **liver** and **tumor** segmentation, the overall DSC is computed as the average of the Dice scores for the liver and tumor regions:
+
 $$
-\mathrm{DSC} = \frac{2 |A \cap B|}{|A| + |B|}
+\mathrm{DSC} =
+\frac{1}{2}
+\left(
+\mathrm{DSC}_{\text{liver}} + \mathrm{DSC}_{\text{tumor}}
+\right)
+$$
+
+where
+
+$$
+\mathrm{DSC}_{c} =
+\frac{2 |A_c \cap B_c|}{|A_c| + |B_c|},
+\quad c \in \{\text{liver}, \text{tumor}\}
 $$
 
 ### Jaccard Similarity Coefficient (JSC)
@@ -114,9 +128,10 @@ $$
 
 - $A$: ground-truth segmentation  
 - $B$: predicted segmentation  
+- $A_c, B_c$: ground-truth and prediction for class $c$  
 - $| \cdot |$: volume (number of voxels)  
 - $\partial A, \partial B$: surfaces of $A$ and $B$  
-- $d(\cdot, \cdot)$: Euclidean distance  
+- $d(\cdot, \cdot)$: Euclidean distance
 
 
 ## Results
