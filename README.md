@@ -55,6 +55,69 @@ These phases are complementary, making multi-phase fusion a powerful strategy fo
 - **Clinically-guided propagation order**: CGS-Net introduces a Multi-Phase Cross-Query Sequential (MCQS) mechanism that explicitly models clinically consistent propagation. Ablation results (Table 3) confirm that the PV→ART→DL order achieves the best performance (76.29% DSC, 61.67% Jaccard), with the lowest HD$_{95}$ and ASSD. 
 - **Proposed network:** The upgraded CGS-Net incorporates two enhanced configurations — a spatial clinical-guided fusion module and a temporal dual-configuration strategy — enabling more effective cross-phase feature interaction and fine-grained refinement for robust multi-phase liver tumor segmentation. 
 
+## Evaluation Metrics
+We employ several commonly used evaluation metrics to quantitatively evaluate the segmentation performance, including Dice Similarity Coefficient (DSC), Jaccard Similarity Coefficient (JSC), Average Symmetric Surface Distance (ASSD), and 95% Hausdorff Distance (HD$_{95}$) \cite{jiang20253d}.  
+For experiments with single-phase (1P), two-phase (2P), and three-phase (3P) inputs, Volume Overlap Error (VOE) and Relative Volume Difference (RVD) are additionally used as supplementary evaluation metrics.
+
+### Dice Similarity Coefficient (DSC)
+
+$$
+\mathrm{DSC} = \frac{2 |A \cap B|}{|A| + |B|}
+$$
+
+### Jaccard Similarity Coefficient (JSC)
+
+$$
+\mathrm{JSC} = \frac{|A \cap B|}{|A \cup B|}
+$$
+
+### Average Symmetric Surface Distance (ASSD)
+
+$$
+\mathrm{ASSD}(A, B) =
+\frac{1}{|\partial A| + |\partial B|}
+\left(
+\sum_{x \in \partial A} d(x, \partial B)
++
+\sum_{y \in \partial B} d(y, \partial A)
+\right)
+$$
+
+### 95% Hausdorff Distance (HD$_{95}$)
+
+$$
+\mathrm{HD}_{95}(A, B) =
+\max \left\{
+\mathrm{percentile}_{95}
+\bigl( \{ d(x, \partial B) \mid x \in \partial A \} \bigr),
+\;
+\mathrm{percentile}_{95}
+\bigl( \{ d(y, \partial A) \mid y \in \partial B \} \bigr)
+\right\}
+$$
+
+### Volume Overlap Error (VOE)
+
+$$
+\mathrm{VOE} = 1 - \mathrm{JSC}
+= 1 - \frac{|A \cap B|}{|A \cup B|}
+$$
+
+### Relative Volume Difference (RVD)
+
+$$
+\mathrm{RVD} =
+\frac{|B| - |A|}{|A|}
+$$
+
+### Notation
+
+- $A$: ground-truth segmentation  
+- $B$: predicted segmentation  
+- $| \cdot |$: volume (number of voxels)  
+- $\partial A, \partial B$: surfaces of $A$ and $B$  
+- $d(\cdot, \cdot)$: Euclidean distance  
+
 
 ## Results
 
