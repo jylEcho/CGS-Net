@@ -74,9 +74,7 @@ $$
 where
 
 $$
-\mathrm{DSC}_{c} =
-\frac{2 |A_c \cap B_c|}{|A_c| + |B_c|},
-\quad c \in \{\text{liver}, \text{tumor}\}
+\mathrm{DSC} = \frac{2 |A \cap B|}{|A| + |B|}
 $$
 
 ### Jaccard Similarity Coefficient (JSC)
