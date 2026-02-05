@@ -63,24 +63,19 @@ For experiments with single-phase (1P), two-phase (2P), and three-phase (3P) inp
 
 Since our task involves both **liver** and **tumor** segmentation, the overall DSC is computed as the average of the Dice scores for the liver and tumor regions:
 
-$$
-\mathrm{DSC} =
-\frac{1}{2}
-\left(
-\mathrm{DSC}_{\text{liver}} + \mathrm{DSC}_{\text{tumor}}
-\right)
-$$
-
 where
 
 $$
 \mathrm{DSC} = \frac{2 |A \cap B|}{|A| + |B|}
 $$
 
-### Jaccard Similarity Coefficient (JSC)
+### Jaccard Similarity Coefficient (JSC) 
 
 $$
-\mathrm{JSC} = \frac{|A \cap B|}{|A \cup B|}
+\mathrm{JSC} =
+w_{\text{liver}} \, \mathrm{JSC}_{\text{liver}}
++
+w_{\text{tumor}} \, \mathrm{JSC}_{\text{tumor}}
 $$
 
 ### Average Symmetric Surface Distance (ASSD)
