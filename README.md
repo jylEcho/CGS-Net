@@ -90,19 +90,6 @@ $$
 \right)
 $$
 
-### 95% Hausdorff Distance (HD$_{95}$)
-
-$$
-\mathrm{HD}_{95}(A, B) =
-\max \left\{
-\mathrm{percentile}_{95}
-\bigl( \{ d(x, \partial B) \mid x \in \partial A \} \bigr),
-\;
-\mathrm{percentile}_{95}
-\bigl( \{ d(y, \partial A) \mid y \in \partial B \} \bigr)
-\right\}
-$$
-
 ### Volume Overlap Error (VOE)
 
 $$
