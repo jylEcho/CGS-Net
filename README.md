@@ -107,7 +107,6 @@ $$
 
 $$
 \mathrm{VOE} = 1 - \mathrm{JSC}
-= 1 - \frac{|A \cap B|}{|A \cup B|}
 $$
 
 ### Relative Volume Difference (RVD)
