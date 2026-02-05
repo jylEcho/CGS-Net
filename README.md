@@ -199,8 +199,12 @@ multi_phase/multi_phase/lists/lists_liver/test_vol.txt
 
 Use the provided training script:
 
-Use the provided training script, Inside train_sformer.sh, training is launched with:
+Start training using the provided training script train_sformer.sh. This script demonstrates two different configurations, corresponding to:
 
+- **./networks/CSF-Net-conv.py**
+- **./networks/CSF-Net-swin.py**
+
+Use the provided training script, Inside train_sformer.sh, training is launched with:
 export CUDA_VISIBLE_DEVICES=
 cd ..
 python train.py \
