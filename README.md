@@ -73,9 +73,9 @@ $$
 
 $$
 \mathrm{JSC} =
-w_{\text{liver}} \, \mathrm{JSC}_{\text{liver}}
+w_{\text{liver}} \* \mathrm{JSC}_{\text{liver}}
 +
-w_{\text{tumor}} \, \mathrm{JSC}_{\text{tumor}}
+w_{\text{tumor}} \* \mathrm{JSC}_{\text{tumor}}
 $$
 
 ### Average Symmetric Surface Distance (ASSD)
