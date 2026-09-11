@@ -1,5 +1,10 @@
 # CGS-Net: Clinical-Guided Spatiotemporal Dual-Configuration Network for Liver Tumor Segmentation 
 
+## 📰 News
+### 2026.03 — Our work CGS-Net is currently under review at IEEE Transactions on Image Processing (TIP).
+
+
+
 <center>
   <img src="https://github.com/jylEcho/CGS-Net/blob/main/images/V15.0.png" width="800" alt="">
 </center>
